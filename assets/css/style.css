@@ -1,0 +1,44 @@
+.login-body {
+	background: url('assets/img/halftone-yellow.png');
+	background-size: cover;
+}
+
+.login-div {
+	margin-top: 7em;
+}
+
+.card {
+	border: 1px solid #eee;
+	padding: 4em;
+	border-radius: 10%;
+}
+
+.btn-padding {
+	margin-top: 2em;
+}
+
+.signup-link p > a {
+	color: #28a745;
+}
+
+.no-account {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.container-profile {
+	margin-top: 7em;
+	margin-bottom: 2em;
+	border: 1px solid #eee;
+	border-radius: 10%;
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+
+.btn-file {
+	border: 1px solid #eee;
+}
+
+.profile p {
+	color: #333;
+}
