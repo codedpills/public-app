@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>All posts</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="">
+
+    <!-- Material Design Icons -->
+    <link rel="stylesheet" href="assets/MaterialDesign-Webfont-master/css/materialdesignicons.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Jasny Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jasny-bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body style="overflow-x:hidden" class="profile-body">
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Public App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    
+    <div class="container-fluid container-post"> 
+
+        <div class="row">
+
+            <!-- main posts feed -->
+            <div class="col" style="padding-right: 70px;">
+
+              <div class="posts">
+                
+                <!-- main post -->
+                <ul class="media-list">
+                  <li class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="assets/img/court.png" alt="profile pic" style="width: 100px; height: 100px; border: 1px solid #eee; padding: 3px; margin-right: 10px;">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Title of what complaint is about</h4>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+
+                      <!-- comments section -->
+                      <div class="row">
+
+                        <div class="col">
+                          <!-- comments FOR-->
+                          <h6><span class="mdi mdi-comment-check-outline cmt-icon"></span> &nbsp IN SUPPORT</h6>
+                          <ul class="media-list">
+                            <li class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img class="media-object" src="assets/img/court.png" alt="profile pic" style="width: 80px; height: 80px; border: 1px solid #eee; padding: 3px; margin-right: 10px;">
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                  consequat.
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="col">
+                          <!-- comments AGAINST-->
+                          <h6><span class="mdi mdi-comment-remove-outline cmt-icon"></span> &nbsp NOT IN SUPPORT</h6>
+                          <ul class="media-list">
+                            <li class="media">
+                              <div class="media-left">
+                                <a href="#">
+                                  <img class="media-object" src="assets/img/court.png" alt="profile pic" style="width: 80px; height: 80px; border: 1px solid #eee; padding: 3px; margin-right: 10px;">
+                                </a>
+                              </div>
+                              <div class="media-body">
+                                <p>
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                  consequat.
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+                  </li>
+                </ul>
+                
+
+              </div>
+
+            </div>
+
+            <!-- side bar with categories -->
+            <div class="col-3">
+
+              <div class="form-group">
+                <button class="btn btn-outline-danger btn-block">Make a new complaint</button>
+              </div>
+
+            </div>
+
+        </div>       
+
+    </div>
+    
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Jasny Bootstrap JavaScript -->
+    <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+
+
+</body>
+</html>
