@@ -56,7 +56,7 @@
         <div class="row">
 
             <!-- main posts feed -->
-            <div class="col" style="padding-right: 70px;">
+            <div class="col" style="padding-right: 80px;">
 
               <div class="posts">
                 
@@ -69,6 +69,7 @@
                       </a>
                     </div>
                     <div class="media-body">
+                      <a href="profile.html" class="profile-link">John Doe</a>
                       <h4 class="media-heading">Title of what complaint is about</h4>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -78,6 +79,12 @@
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                       </p>
+                      <p>
+                        <img src="assets/img/office.jpg" class="img-post">
+                      </p>
+                      <p>
+                        See attached video: <a href="" target="_blank">Video title here</a>
+                      </p>
 
                       <!-- comments section -->
                       <div class="row">
@@ -85,6 +92,7 @@
                         <div class="col">
                           <!-- comments FOR-->
                           <h6><span class="mdi mdi-comment-check-outline cmt-icon"></span> &nbsp IN SUPPORT</h6>
+
                           <ul class="media-list">
                             <li class="media">
                               <div class="media-left">
@@ -93,6 +101,7 @@
                                 </a>
                               </div>
                               <div class="media-body">
+                                <a href="profile.html" class="profile-link">John Doe</a>
                                 <p>
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -102,11 +111,26 @@
                               </div>
                             </li>
                           </ul>
+
+                          <!-- button shoots a textbox for comment -->
+                          <div class="form-group">
+                            <a href="#" class="btn btn-outline-success" id="comment-support-btn" style="border: none; font-weight: bold;">Comment in support</a>
+                          </div> 
+
+                          <form class="form">
+                            <div class="form-group" id="comment-support">
+                              <textarea id="support_text" name="support_text" rows="3" class="form-control" placeholder="write your comment here"></textarea>
+                              <br>
+                              <button class="btn btn-primary">post comment</button>
+                            </div>
+                          </form>
+
                         </div>
 
                         <div class="col">
                           <!-- comments AGAINST-->
                           <h6><span class="mdi mdi-comment-remove-outline cmt-icon"></span> &nbsp NOT IN SUPPORT</h6>
+
                           <ul class="media-list">
                             <li class="media">
                               <div class="media-left">
@@ -115,6 +139,7 @@
                                 </a>
                               </div>
                               <div class="media-body">
+                                <a href="profile.html" class="profile-link">John Doe</a>
                                 <p>
                                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -124,6 +149,20 @@
                               </div>
                             </li>
                           </ul>
+
+                          <!-- button shoots a textbox for comment -->
+                          <div class="form-group">
+                            <a href="#" class="btn btn-outline-danger" id="comment-nosupport-btn" style="border: none; font-weight: bold;">Comment NOT in support</a>
+                          </div> 
+
+                          <form class="form">
+                            <div class="form-group" id="comment-nosupport">
+                              <textarea id="nosupport_text" name="support_text" rows="3" class="form-control" placeholder="write your comment here"></textarea>
+                              <br>
+                              <button class="btn btn-primary">post comment</button>
+                            </div>
+                          </form>
+
                         </div>
                         
                       </div>
@@ -140,8 +179,130 @@
             <!-- side bar with categories -->
             <div class="col-3">
 
+              <!-- Button trigger modal -->
               <div class="form-group">
-                <button class="btn btn-outline-danger btn-block">Make a new complaint</button>
+                <button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#exampleModalCenter">Make a new complaint</button>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">Make a complaint</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                  
+                        <div class="form-group">
+                          <label for="post_title">Title</label>
+                          <input type="text" class="form-control" placeholder="What is your complaint about" name="post_title" id="post_title">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="post_description">Brief description of the problem</label>
+                          <textarea class="form-control" placeholder="Make your complaint in a few words" name="post_description" id="post_description" rows="3"></textarea>
+                        </div>
+
+                        <h6>Upload an image to help describe the problem better (OPTIONAL)</h6>
+                        <div class="fileinput fileinput-new" data-provides="fileinput" style="margin-bottom: 30px;">
+                          <div class="fileinput-new thumbnail" style="width: 300px; height: 250px; border: 1px solid #eee;">
+                          </div>
+                          <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 300px; max-height: 250px;"></div>
+                          <div>
+                            <span class="btn btn-default btn-file"><span class="fileinput-new">click to select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+                            <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                          </div>
+                        </div>
+
+                        <div>
+                          <label for="post_video_title">Do you have any video that can help describe the problem better? (OPTIONAL)</label>
+                        </div>
+
+                        <div class="row">
+                          <div class="form-group col">
+                            <input type="text" class="form-control" placeholder="Share video TITLE here" name="post_video_title" id="post_video_title">
+                          </div>
+                          <div class="form-group col">
+                            <input type="text" class="form-control" placeholder="Share video URL here" name="post_video" id="post_video">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="categories">This complaint is related to</label>
+                          <select class="form-control" name="categories" id="categories">
+                            <option>Technology</option>
+                            <option>Education</option>
+                            <option>Health</option>
+                            <option>Public administration</option>
+                            <option>Agriculture</option>
+                            <option>Communication</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <button type="submit" class="btn btn-primary">Submit complaint</button>
+                        </div>
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+
+                <h5>Browse feed by:</h5>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="all" id="all" value="option1" checked>
+                  <label class="form-check-label" for="all">
+                    All
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="agriculture" id="agriculture" value="option2">
+                  <label class="form-check-label" for="agriculture">
+                    Agriculture
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="education" id="education" value="option3">
+                  <label class="form-check-label" for="education">
+                    Education
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="technology" id="technology" value="option4">
+                  <label class="form-check-label" for="technology">
+                    Technology
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Health" id="Health" value="option5">
+                  <label class="form-check-label" for="Health">
+                    Agriculture
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="administration" id="administration" value="option6">
+                  <label class="form-check-label" for="administration">
+                    Public administration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="communication" id="communication" value="option6">
+                  <label class="form-check-label" for="communication">
+                    Communication
+                  </label>
+                </div>
+
               </div>
 
             </div>
@@ -161,6 +322,28 @@
 
     <!-- Jasny Bootstrap JavaScript -->
     <script type="text/javascript" src="assets/js/jasny-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+      $("#comment-support").hide();
+      $("#comment-support-btn").click(function() { 
+        $("#comment-support").slideToggle(function(){
+          $("#support_text").focus();
+        });
+
+        return false;
+      });
+
+      $("#comment-nosupport").hide();
+      $("#comment-nosupport-btn").click(function() { 
+        $("#comment-nosupport").slideToggle(function(){
+          $("#nosupport_text").focus();
+        });
+
+        return false;
+      });
+
+    </script>
 
 
 </body>

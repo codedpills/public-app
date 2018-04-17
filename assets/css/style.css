@@ -47,3 +47,22 @@
 .cmt-icon {
 	font-size: 2em;
 }
+
+.mdi-comment-check-outline:before {
+    color: green;
+}
+
+.mdi-comment-remove-outline:before {
+    color: brown;
+}
+
+.img-post {
+	height: 35%;
+	width: 35%;
+}
+
+.profile-link {
+	color: #888282;
+	font-weight: 600;
+}
+
